@@ -1,1 +1,1 @@
-/data/ #ignore everything in data folder - relative to folder this .gitignore is in
+/data/* #ignore everything in data folder - relative to folder this .gitignore is in
