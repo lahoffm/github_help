@@ -1,13 +1,13 @@
 #/data/* or /data/** could make it delete things you don’t want, see https://web.archive.org/web/20140310215100/http://blog.icefusion.co.uk:80/git-stash-can-delete-ignored-files-git-stash-u/
 
-#ignores all .txt files in data folder, a subfolder of folder containing .gitignore
-/data/*.txt
+# Ignores all .txt files in all folders recursively, starting with folder containing .gitignore
+*.txt
 
 # ignores all .txt files JUST folder containing .gitignore
-/*.txt
+#/*.txt
 
-# Ignores all .txt files in all folders recursively, starting with folder containing .gitignore
-#*.txt
+#ignores all .txt files in data folder, a subfolder of folder containing .gitignore
+#/data/*.txt
 
 # What to put in .gitignore
 # https://zellwk.com/blog/gitignore/
