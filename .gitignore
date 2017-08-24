@@ -3,7 +3,6 @@
 
 # Ignores all .txt files in all folders recursively, starting with folder containing .gitignore
 *.txt
-*.log
 
 # ignores all .txt files JUST folder containing .gitignore
 #/*.txt
