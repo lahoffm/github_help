@@ -1,5 +1,9 @@
 #ignores everything in data folder, a subfolder of the .gitignore folder
+# beginning slash = relative to location of .gitignore (so it doesn't match anywhere in project)
+
 /data/**
+
+dat/**
 
 # ignores all .txt files JUST in the current folder
 /*.txt
