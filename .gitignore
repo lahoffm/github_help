@@ -1,5 +1,5 @@
 #ignores everything in data folder, a subfolder of the .gitignore folder
-/data/*
+/data/**
 
 # ignores all .txt files JUST in the current folder
 /*.txt
