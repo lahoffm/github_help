@@ -13,5 +13,5 @@
 ## Other useful commands
 ```git remote show origin``` - which URL is origin
 ```git branch``` - shows branches including local "master" branch
-
+```git ls-tree -r master``` - list all files in branch named "master"
 
