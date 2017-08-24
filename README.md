@@ -16,7 +16,15 @@
     Then type ```:w``` followed by <kbd>enter</kbd> to save.  
     Finally ```:q``` followed by <kbd>enter</kbd> to quit.
 
+## Working with branches
+```git branch``` - list branches in repo  
+```git branch mybranch``` - create branch  
+```git checkout -b mybranch``` - switch to branch (```-b``` is to create & checkout in 1 step)  
+```git branch -d mybranch``` - delete branch  
+To merge branches , make sure the current branch is the target branch you'd like to merge into.
+```git merge master``` - master = name of branch you want to merge with current branch
 
+	
 ## [Undoing](https://github.com/blog/2019-how-to-undo-almost-anything-with-git) [commits](https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting)
 
 ### Restoring single file locally
@@ -33,9 +41,7 @@
 ```git revert``` - but safest way is to just fix the bad code locally and push a new commit  
 
 ## Other core commands
-```git diff```  
-```git checkout```  
-```git branch``` - shows branches including local "master" branch  
+```git diff```, ```git stash```  
 
 ## Other useful commands
 ```git remote show origin``` - which URL is origin  
@@ -45,5 +51,26 @@
 ## Tutorials I've gone through
 * [Software carpentry](https://swcarpentry.github.io/git-novice/)
 
+## Tutorials I'd like to go through
+* [Git-scm ebook](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files)
+
 ## Helpful cheatsheets
 * [Github visual guide](http://marklodato.github.io/visual-git-guide/index-en.html)
+
+
+
+
+## Helpful snippets to incorporate to this README later
+
+From Stackoverflow
+```
+$ git pull <remote> <branch> # fetches the code and merges it into 
+                             # your working directory
+$ git fetch <remote> <branch> # fetches the code but does not merge
+                              # it into your working directory
+
+$ git pull --tag <remote> <branch> # same as above but fetch tags as well
+$ git fetch --tag <remote> <branch> # you get the idea
+
+That pretty much covers every case for getting the latest copy of the code from the remote repository.
+```
