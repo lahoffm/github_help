@@ -1,7 +1,5 @@
 # Lukas's scratchpad of Github tips
 
-
-
 ## Pipeline
 
 ```git status```

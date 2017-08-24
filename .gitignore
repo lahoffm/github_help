@@ -1,12 +1,14 @@
-#ignores everything in data folder, a subfolder of the .gitignore folder
-/data/**
+#ignores all .txt files in data folder, a subfolder of folder containing .gitignore
+/data/*.txt
 
-temp.py
-
-# ignores all .txt files JUST in the current folder
+# ignores all .txt files JUST folder containing .gitignore
 /*.txt
 
-*.txt
+# Ignores all .txt files in all folders recursively, starting with folder containing .gitignore
+#*.txt
 
 # What to put in .gitignore
 # https://zellwk.com/blog/gitignore/
+
+
+
