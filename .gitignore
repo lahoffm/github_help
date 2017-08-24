@@ -2,7 +2,7 @@
 data/*
 
 # ignores all .txt files JUST in the current folder
-*.txt
+/*.txt
      
 # ignores all .txt recursive from the current folder
 #**.txt

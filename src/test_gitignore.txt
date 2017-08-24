@@ -1,0 +1,1 @@
+Testing that .gitignore *.txt will ignore this file
