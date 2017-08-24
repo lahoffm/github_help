@@ -1,1 +1,1 @@
-Testing that .gitignore *.txt will ignore this file
+Testing whether .gitignore *.txt will ignore this file.
