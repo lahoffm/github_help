@@ -5,6 +5,7 @@
 ```git status```
 
 ```git add -A``` - track files
+```git diff``` [see changes](https://stackoverflow.com/questions/2529441/how-to-read-the-output-from-git-diff)
 ```git commit -a -m "message"``` - lock tracked files to local computer
 ```git push origin master``` - sync local machine changes to online repo
 
