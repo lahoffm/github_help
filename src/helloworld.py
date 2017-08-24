@@ -1,2 +1,2 @@
 print('Hello there')
-print('dummy')
+print('you are a dummy')
