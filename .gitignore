@@ -1,12 +1,5 @@
-#ignores everything in data folder (will also ignore /something/data folder)
+#ignores everything in data folder, a subfolder of the .gitignore folder
 /data/*
 
 # ignores all .txt files JUST in the current folder
 /*.txt
-     
-# ignores all .txt recursive from the current folder
-#**.txt
-     
-# ignores all .txt in subdirectories recursive from the current 
-# folder (does not include the current folder)
-#**/*.txt
