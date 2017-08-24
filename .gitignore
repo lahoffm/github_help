@@ -1,2 +1,1 @@
-#ignore everything in data folder
-data/*
+/data/* #ignore everything in data folder, which is relative to root
