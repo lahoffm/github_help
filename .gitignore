@@ -1,3 +1,5 @@
+#/data/* or /data/** could make it delete things you don’t want, see https://web.archive.org/web/20140310215100/http://blog.icefusion.co.uk:80/git-stash-can-delete-ignored-files-git-stash-u/
+
 #ignores all .txt files in data folder, a subfolder of folder containing .gitignore
 /data/*.txt
 
