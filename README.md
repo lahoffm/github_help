@@ -9,13 +9,12 @@
 ```git push origin master``` - sync local machine changes to online repo  
 ```git pull origin master``` - clone current copy of origin to local master branch  
 
-* Vim tips when it asks to write a message
-    Press ``i``` to enter insert mode.
-    Now you can type your message, as if you were in a normal (non-modal) text editor.
-    Press ```esc``` to go back to command mode.
-    Then type ```:w``` followed by <kbd>enter</kbd> to save.
-    Finally :q followed by <kbd>enter</kbd> to quit.
-
+* Vim tips when it asks to write a message  
+    Press ```i``` to enter insert mode.  
+    Type message.  
+    Press  <kbd>esc</kbd> to go back to command mode.  
+    Then type ```:w``` followed by <kbd>enter</kbd> to save.  
+    Finally ```:q``` followed by <kbd>enter</kbd> to quit.
 
 
 ## [Undoing](https://github.com/blog/2019-how-to-undo-almost-anything-with-git) [commits](https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting)
