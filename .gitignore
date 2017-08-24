@@ -1,5 +1,7 @@
 #/data/* or /data/** could make it delete things you don’t want, see https://web.archive.org/web/20140310215100/http://blog.icefusion.co.uk:80/git-stash-can-delete-ignored-files-git-stash-u/
-# If you add a .gitignore *.txt, but there was previously a tracked .txt file that you had committed, it won’t ignore that file. You should first remove that file from the repo, do a commit, then re-add it to the repo (then it will get ignored).
+# If you add a .gitignore *.txt, but there was previously a tracked .txt file that you had committed, it won’t ignore that file.
+# You should first remove that file from the repo, do a commit, then re-add it to the repo (then it will get ignored).
+# Or use git rm --cached file_to_ignore.txt
 
 # Ignores all .txt files in all folders recursively, starting with folder containing .gitignore
 *.txt
