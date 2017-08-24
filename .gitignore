@@ -3,7 +3,7 @@
 
 /data/**
 
-dat/**
+dat/*
 
 # ignores all .txt files JUST in the current folder
 /*.txt
