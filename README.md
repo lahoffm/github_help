@@ -1,12 +1,14 @@
 # Lukas's scratchpad of Github tips
 
-## Pipeline
+**I did many small commits to learn about Github, so if you fork this repo that will clutter up your commit history.**  
+**I recommend you download zipfile and copy into new repo. Or use ```git clone --depth 1 https://github.com/lahoffm/github_help.git```.
 
+## Pipeline
 ```git status```  
-```git add -A``` - track files  
+```git add -A``` - track files in staging area for commits
 ```git diff``` - [see changes](https://stackoverflow.com/questions/2529441/how-to-read-the-output-from-git-diff)  
-```git commit -a -m "message"``` - lock tracked files to local computer  
-```git push origin master``` - sync local machine changes to online repo  
+```git commit -am "message"``` - lock tracked files to local computer  
+```git push origin master``` - sync local master branch to online repo  
 ```git pull origin master``` - clone current copy of origin to local master branch  
 
 * Vim tips when it asks to write a message  
@@ -17,14 +19,23 @@
     Finally ```:q``` followed by <kbd>enter</kbd> to quit.
 
 ## Working with branches
-```git branch``` - list branches in repo  
-```git branch mybranch``` - create branch  
 ```git checkout -b mybranch``` - switch to branch (```-b``` is to create & checkout in 1 step)  
-```git branch -d mybranch``` - delete branch  
-To merge branches , make sure the current branch is the target branch you'd like to merge into.
-```git merge master``` - master = name of branch you want to merge with current branch
+```git branch``` - list branches in repo and current branch  
+```git add -A``` - if files were staged in master they are also staged in branch but good to do in case new files are made  
+```git commit``` as usual within the branch  
+```git push origin mybranch``` - sync local mybranch branch to online repo  
+```git merge mybranch --no-ff --m "merging mybranch into master``` - mybranch = name of branch you want to merge with current branch (such as master).  
+	Make sure you're in the branch you want to merge to! ```--no-ff``` - no fast-forward (can add or reduce confusion on case-by-case basis)  
+* Solve merge conflict
+	* open file with conflict
+	* Delete conflict marker lines containing ```<<<<<<<```, ```=======```, ```>>>>>>>```
+	* Make the changes you want to see in the final merge
+	* ```git add .```
+	* ```git commit -m "resolved merge conflict"```
+```git branch -d mybranch``` - delete local branch  
+```git push origin --delete mybranch``` - delete remote branch  
+```gitk --all``` - visualize commit tree
 
-	
 ## [Undoing](https://github.com/blog/2019-how-to-undo-almost-anything-with-git) [commits](https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting)
 
 ### Restoring single file locally
@@ -40,37 +51,20 @@ To merge branches , make sure the current branch is the target branch you'd like
 ### Restore after pushing to remote repo
 ```git revert``` - but safest way is to just fix the bad code locally and push a new commit  
 
-## Other core commands
-```git diff```, ```git stash```  
-
 ## Other useful commands
-```git remote show origin``` - which URL is origin  
+```git diff```  
+```git remote -v``` - remote URLs (such as origin)  
 ```git ls-tree -r master``` - list all files in branch named "master"  
-```git remote -v``` show URL of "origin"  
+
 
 ## Tutorials I've gone through
 * [Software carpentry](https://swcarpentry.github.io/git-novice/)
+* [Atlassian git tutorials](https://www.atlassian.com/git/tutorials/)
+* [Gitk tutorial](https://lostechies.com/joshuaflanagan/2010/09/03/use-gitk-to-understand-git/)
 
 ## Tutorials I'd like to go through
 * [Git-scm ebook](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files)
 
 ## Helpful cheatsheets
 * [Github visual guide](http://marklodato.github.io/visual-git-guide/index-en.html)
-
-
-
-
-## Helpful snippets to incorporate to this README later
-
-From Stackoverflow
-```
-$ git pull <remote> <branch> # fetches the code and merges it into 
-                             # your working directory
-$ git fetch <remote> <branch> # fetches the code but does not merge
-                              # it into your working directory
-
-$ git pull --tag <remote> <branch> # same as above but fetch tags as well
-$ git fetch --tag <remote> <branch> # you get the idea
-
-That pretty much covers every case for getting the latest copy of the code from the remote repository.
-```
+* [Git concepts simplified](http://gitolite.com/gcs.html#(1))
