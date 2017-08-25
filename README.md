@@ -51,6 +51,7 @@
 * [Atlassian git tutorials](https://www.atlassian.com/git/tutorials/)
 * [Gitk tutorial](https://lostechies.com/joshuaflanagan/2010/09/03/use-gitk-to-understand-git/)
 * [Git-scm ebook](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files)
+* [Aha moments when learning git](https://betterexplained.com/articles/aha-moments-when-learning-git/)
 
 ## Nice cheatsheets
 * [Github visual guide](http://marklodato.github.io/visual-git-guide/index-en.html)
