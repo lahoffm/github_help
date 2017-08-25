@@ -56,7 +56,7 @@
 * [Aha moments when learning git](https://betterexplained.com/articles/aha-moments-when-learning-git/)
 * [A successful git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
 * [Git best practices](https://gist.github.com/pandeiro/1552496)
-blabla
+
 ## Nice cheatsheets
 * [PDF from rogerdudler.github.io/git-guide](git_cheat_sheet.pdf)
 * [PDF from education.github.com](git-cheat-sheet-education.pdf)
