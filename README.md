@@ -1,9 +1,9 @@
 # Lukas's scratchpad of Github tips
 
-**I did many small commits to learn about Github, so if you fork this repo that will clutter up your commit history.**  
+**I did many small commits here to learn about ```git```, so forking this repo will clutter your commit history.**  
 **I recommend you download zipfile and copy into new repo. Or use ```git clone --depth 1 https://github.com/lahoffm/github_help.git```.
 
-## Pipeline for just doing commits on master branch
+## Simple pipeline (*best practice: don't commit to master, commit to branches then merge with master*)
 ```git status```  
 ```git add -A``` - track files in staging area for commits
 ```git diff``` - [see changes](https://stackoverflow.com/questions/2529441/how-to-read-the-output-from-git-diff)  
@@ -46,19 +46,25 @@
 ```git remote -v``` - remote URLs (such as origin)  
 ```git ls-tree -r master``` - list all files in branch named "master"  
 
-## Nice tutorials
+## Nice tutorials & guides
+* [Git-scm ebook](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files)
 * [Software carpentry](https://swcarpentry.github.io/git-novice/)
 * [Atlassian git tutorials](https://www.atlassian.com/git/tutorials/)
+* [Git concepts simplified](http://gitolite.com/gcs.html#(1))
+* [Github visual guide](http://marklodato.github.io/visual-git-guide/index-en.html)
 * [Gitk tutorial](https://lostechies.com/joshuaflanagan/2010/09/03/use-gitk-to-understand-git/)
-* [Git-scm ebook](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files)
 * [Aha moments when learning git](https://betterexplained.com/articles/aha-moments-when-learning-git/)
+* [A successful git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
+* [Git best practices](https://gist.github.com/pandeiro/1552496)
 
 ## Nice cheatsheets
-* [Github visual guide](http://marklodato.github.io/visual-git-guide/index-en.html)
-* [Git concepts simplified](http://gitolite.com/gcs.html#(1))
+* [PDF from rogerdudler.github.io/git-guide](git_cheat_sheet.pdf)
+* [PDF from education.github.com](git-cheat-sheet-education.pdf)
 
+## Instructions to contribute to group project repos - still in draft form
 
-## Instructions to contribute to Anidata repos - draft form
+* Use git fetch/merge instead of just git pull?
+* git tag?
 * git clone the repo into own computer, then fork the repo (in browser)
 * cd to the folder ht-archive
 * git branch, should say master
@@ -72,6 +78,6 @@
 * git push origin my_branch_name - pushes the branch to your fork of ht-archive online
 * git checkout master - go back to master
 * git pull -r upstream master - pull from the upstream code (anidata/ht-archive) into master
-* Now if you do git checkout my_branch_name, then git pull -r upstream master then the branch will be updated into the latest version of the upstream repo (anidata/ht-archive)??? Not sure if this is how it works.
+* Now if you do git checkout my_branch_name, then git pull -r upstream master then the branch will be updated into the latest version of the upstream repo (anidata/ht-archive)?? Not sure if this is how it works.
 * Philosophy: you want your local “master” to always be up-to-date with the upstream repo (i.e. anidata/ht-archive) and then you work on your local branch (which you push to your fork online)
 
