@@ -48,7 +48,7 @@
 ```git checkout c6fab02; git checkout –b mybranch```
 * Undoing a merge
 	* Haven't tried this but here's [two](http://www.deferredprocrastination.co.uk/blog/2012/git-un-merge/) [sites](https://mijingo.com/blog/reverting-a-git-merge)
-* Restore after pushing to remote repo
+* Restore after pushing to remote repo  
 ```git revert``` - but safest way is to just fix the bad code locally and push a new commit  
 
 ## Other useful commands 
