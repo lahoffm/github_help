@@ -1,15 +1,14 @@
 # Lukas's scratchpad of Github tips
 
 **I did many small commits here to learn about ```git```, so forking this repo will clutter your commit history.**  
-**I recommend you download zipfile and copy into new repo. Or use ```git clone --depth 1 https://github.com/lahoffm/github_help.git```.
+**I recommend you download zipfile and copy into new repo. Or use ```git clone --depth 1 https://github.com/lahoffm/github_help.git```.**
 
-## Simple pipeline (*best practice: don't commit to master, commit to branches then merge with master*)
+## Simple pipeline (*best practice: don't commit to master, commit to branches then merge into master*)
 ```git status```  
-```git add -A``` - track files in staging area for commits
+```git add -A``` - track files in staging area for commits  
 ```git diff``` - [see changes](https://stackoverflow.com/questions/2529441/how-to-read-the-output-from-git-diff)  
 ```git commit -am "message"``` - lock tracked files to local computer  
 ```git push origin master``` - sync local master branch to online repo  
-```git pull origin master``` - clone current copy of origin to local master branch  
 
 ## Working with branches
 ```git checkout -b mybranch``` - switch to branch (```-b``` is to create & checkout in 1 step)  
@@ -17,18 +16,22 @@
 ```git add -A``` - if files were staged in master they are also staged in branch but good to do in case new files are made  
 ```git commit``` as usual within the branch  
 ```git push origin mybranch``` - sync local mybranch branch to online repo  
-```git merge mybranch --no-ff --m "merging mybranch into master"``` - mybranch = name of branch you want to merge with current branch (such as master).  
-	Make sure you're in the branch you want to merge to! ```--no-ff``` - no fast-forward (can add or reduce confusion on case-by-case basis)  
+```git merge mybranch --no-ff --m "merging mybranch into current branch"``` - mybranch = name of branch you want to merge with current branch (such as master).
+Make sure you're in the branch you want to merge to! ```--no-ff``` - no fast-forward (can add or reduce confusion on case-by-case basis)  
 * Solve merge conflict
-	* open file with conflict
+	* Open file with conflict
 	* Delete conflict marker lines containing ```<<<<<<<```, ```=======```, ```>>>>>>>```
 	* Make the changes you want to see in the final merge
+	* Save file
 	* ```git add .```
-	* ```git commit -m "resolved merge conflict"```
+	* ```git commit -m "resolved merge conflict"```  
 ```git branch -d mybranch``` - delete local branch  
-```git push origin --delete mybranch``` - delete remote branch
-```git push origin master``` - don't forget to push "the branch that you merged into" to the remote too!
-```gitk --all``` - visualize commit tree
+```git push origin --delete mybranch``` - delete remote branch  
+```git push origin master``` - don't forget to push "the branch that you merged into" to the remote too!  
+```gitk --all``` - [visualize commit tree](https://lostechies.com/joshuaflanagan/2010/09/03/use-gitk-to-understand-git/)
+
+![gitk](img/gitk.png)
+
 
 ## [Undoing](https://github.com/blog/2019-how-to-undo-almost-anything-with-git) [commits](https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting)
 
@@ -64,10 +67,12 @@
 * [PDF from education.github.com](git-cheat-sheet-education.pdf)
 
 ## Instructions to contribute to group project repos - still in draft form
-
+* ```git pull origin master``` - clone current copy of origin to local master branch  
 * [Git Pro Section 6.2 - Contributing to a Project](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project)
 * Use git fetch/merge instead of just git pull?
 * git tag?
+
+
 * git clone the repo into own computer, then fork the repo (in browser)
 * cd to the folder ht-archive
 * git branch, should say master
