@@ -44,6 +44,7 @@
 
 ## Other useful commands 
 ```git remote -v``` - remote URLs (such as origin)  
+```git ls-remote``` - references in remote repo
 ```git ls-tree -r master``` - list all files in branch named "master"  
 
 ## Nice tutorials & guides
