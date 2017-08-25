@@ -3,20 +3,13 @@
 **I did many small commits to learn about Github, so if you fork this repo that will clutter up your commit history.**  
 **I recommend you download zipfile and copy into new repo. Or use ```git clone --depth 1 https://github.com/lahoffm/github_help.git```.
 
-## Pipeline
+## Pipeline for just doing commits on master branch
 ```git status```  
 ```git add -A``` - track files in staging area for commits
 ```git diff``` - [see changes](https://stackoverflow.com/questions/2529441/how-to-read-the-output-from-git-diff)  
 ```git commit -am "message"``` - lock tracked files to local computer  
 ```git push origin master``` - sync local master branch to online repo  
 ```git pull origin master``` - clone current copy of origin to local master branch  
-
-* Vim tips when it asks to write a message  
-    Press ```i``` to enter insert mode.  
-    Type message.  
-    Press  <kbd>esc</kbd> to go back to command mode.  
-    Then type ```:w``` followed by <kbd>enter</kbd> to save.  
-    Finally ```:q``` followed by <kbd>enter</kbd> to quit.
 
 ## Working with branches
 ```git checkout -b mybranch``` - switch to branch (```-b``` is to create & checkout in 1 step)  
@@ -38,33 +31,46 @@
 
 ## [Undoing](https://github.com/blog/2019-how-to-undo-almost-anything-with-git) [commits](https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting)
 
-### Restoring single file locally
+* Restoring single file locally
 ```HEAD``` - most recent commit, ```HEAD~1``` = one commit before ```HEAD```  
 ```git log --oneline -5``` - see unique identifiers for last 5 commits  
 ```git log --patch src/helloworld.py``` - narrow down which commit you want to restore  
 ```git checkout c6fab02 src/helloworld.py```  
 ```git commit –a –m “restore helloworld.py from commit c6fab02”```  
-
-### Restore everything locally to where it was after a prior commit (*use with caution*)
+* Restore everything locally to where it was after a prior commit (*use with caution*)
 ```git reset --hard c6fab02```  
-
-### Restore after pushing to remote repo
+* Restore after pushing to remote repo
 ```git revert``` - but safest way is to just fix the bad code locally and push a new commit  
 
-## Other useful commands
-```git diff```  
+## Other useful commands 
 ```git remote -v``` - remote URLs (such as origin)  
 ```git ls-tree -r master``` - list all files in branch named "master"  
 
-
-## Tutorials I've gone through
+## Nice tutorials
 * [Software carpentry](https://swcarpentry.github.io/git-novice/)
 * [Atlassian git tutorials](https://www.atlassian.com/git/tutorials/)
 * [Gitk tutorial](https://lostechies.com/joshuaflanagan/2010/09/03/use-gitk-to-understand-git/)
-
-## Tutorials I'd like to go through
 * [Git-scm ebook](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files)
 
-## Helpful cheatsheets
+## Nice cheatsheets
 * [Github visual guide](http://marklodato.github.io/visual-git-guide/index-en.html)
 * [Git concepts simplified](http://gitolite.com/gcs.html#(1))
+
+
+## Instructions to contribute to Anidata repos - draft form
+* git clone the repo into own computer, then fork the repo (in browser)
+* cd to the folder ht-archive
+* git branch, should say master
+* git remote rename origin upstream 
+* git remote add origin <your_url> such as https://github.com/lahoffm/ht-archive.git (the URL you see in browser when you click on the “Clone or Download”)
+* git branch my_branch_name [no spaces] - whenever you start working on something
+* git checkout my_branch_name
+* git status - should say you are on branch my_branch_name instead of master
+* Now start working on the code
+* git commit
+* git push origin my_branch_name - pushes the branch to your fork of ht-archive online
+* git checkout master - go back to master
+* git pull -r upstream master - pull from the upstream code (anidata/ht-archive) into master
+* Now if you do git checkout my_branch_name, then git pull -r upstream master then the branch will be updated into the latest version of the upstream repo (anidata/ht-archive)??? Not sure if this is how it works.
+* Philosophy: you want your local “master” to always be up-to-date with the upstream repo (i.e. anidata/ht-archive) and then you work on your local branch (which you push to your fork online)
+
