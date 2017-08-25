@@ -25,6 +25,7 @@
 	* Save file
 	* ```git add .```
 	* ```git commit -m "resolved merge conflict"```  
+
 ```git branch -d mybranch``` - delete local branch  
 ```git push origin --delete mybranch``` - delete remote branch  
 ```git push origin master``` - don't forget to push "the branch that you merged into" to the remote too!  
