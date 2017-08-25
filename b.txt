@@ -1,1 +1,2 @@
 Last commit before branch.
+master says "hi"
