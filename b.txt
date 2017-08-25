@@ -1,1 +1,2 @@
-Last commit before branch. Commit 1 in master after branch1 was made.
+Last commit before branch.
+branch1 commit 1
