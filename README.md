@@ -63,6 +63,7 @@
 
 ## Instructions to contribute to group project repos - still in draft form
 
+* [Git Pro Section 6.2 - Contributing to a Project](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project)
 * Use git fetch/merge instead of just git pull?
 * git tag?
 * git clone the repo into own computer, then fork the repo (in browser)
