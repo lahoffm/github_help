@@ -4,7 +4,7 @@
 # Or use git rm --cached file_to_ignore.txt
 
 # Ignores all .txt files in all folders recursively, starting with folder containing .gitignore
-*.txt
+#*.txt
 
 # ignores all .txt files JUST folder containing .gitignore
 #/*.txt
