@@ -47,7 +47,7 @@
 ```git ls-tree -r master``` - list all files in branch named "master"  
 
 ## Nice tutorials & guides
-* [Git-scm ebook](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files)
+* [Pro Git ebook](https://git-scm.com/book/en/v2)
 * [Software carpentry](https://swcarpentry.github.io/git-novice/)
 * [Atlassian git tutorials](https://www.atlassian.com/git/tutorials/)
 * [Git concepts simplified](http://gitolite.com/gcs.html#(1))
