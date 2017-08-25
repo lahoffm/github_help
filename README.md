@@ -28,7 +28,7 @@
 ```git branch -d mybranch``` - delete local branch  
 ```git push origin --delete mybranch``` - delete remote branch  
 ```git push origin master``` - don't forget to push "the branch that you merged into" to the remote too!  
-```gitk --all``` - [visualize commit tree](https://lostechies.com/joshuaflanagan/2010/09/03/use-gitk-to-understand-git/)
+```gitk --all``` - [visualize commit tree](https://lostechies.com/joshuaflanagan/2010/09/03/use-gitk-to-understand-git/)  
 
 ![gitk](img/gitk-example.png)
 
@@ -52,7 +52,7 @@
 
 ## Other useful commands 
 ```git remote -v``` - remote URLs (such as origin)  
-```git ls-remote``` - references in remote repo
+```git ls-remote``` - references in remote repo  
 ```git ls-tree -r master``` - list all files in branch named "master"  
 
 ## Nice tutorials & guides
