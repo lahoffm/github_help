@@ -1,2 +1,1 @@
 Last commit before branch.
-master AND branch1 say "hi"
