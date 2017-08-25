@@ -1,4 +1,2 @@
 Last commit before branch.
-Branch1 commit
-Branch1 commit 2
-Branch1 commit 3
+Branch1_ff commit 1
