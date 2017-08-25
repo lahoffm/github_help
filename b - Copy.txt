@@ -1,0 +1,2 @@
+Last commit before branch.
+b1 commit 1
