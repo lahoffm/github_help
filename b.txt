@@ -1,1 +1,3 @@
 Last commit before branch.
+Branch1 commit
+Branch1 commit 2
