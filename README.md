@@ -28,7 +28,7 @@
 ```git branch -d mybranch``` - delete local branch  
 ```git push origin --delete mybranch``` - delete remote branch  
 ```gitk --all``` - visualize commit tree
-more stuff
+
 ## [Undoing](https://github.com/blog/2019-how-to-undo-almost-anything-with-git) [commits](https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting)
 
 * Restoring single file locally
