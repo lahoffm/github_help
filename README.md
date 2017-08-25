@@ -17,7 +17,7 @@
 ```git commit``` as usual within the branch  
 ```git push origin mybranch``` - sync local mybranch branch to online repo  
 ```git merge mybranch --no-ff --m "merging mybranch into current branch"``` - mybranch = name of branch you want to merge with current branch (such as master).
-Make sure you're in the branch you want to merge to! ```--no-ff``` - no fast-forward (can add or reduce confusion on case-by-case basis)  
+**Make sure you're in the branch you want to merge to!** ```--no-ff``` - no fast-forward (can add or reduce confusion on case-by-case basis)  
 * Solve merge conflict
 	* Open file with conflict
 	* Delete conflict marker lines containing ```<<<<<<<```, ```=======```, ```>>>>>>>```
@@ -45,7 +45,8 @@ Make sure you're in the branch you want to merge to! ```--no-ff``` - no fast-for
 ```git reset --hard c6fab02```  
 * Make a new branch starting at a previous commit  
 ```git checkout c6fab02; git checkout –b mybranch```
-
+* Undoing a merge
+	* Haven't tried this but here's [two](http://www.deferredprocrastination.co.uk/blog/2012/git-un-merge/) [sites](https://mijingo.com/blog/reverting-a-git-merge)
 * Restore after pushing to remote repo
 ```git revert``` - but safest way is to just fix the bad code locally and push a new commit  
 
