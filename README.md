@@ -30,19 +30,22 @@ Make sure you're in the branch you want to merge to! ```--no-ff``` - no fast-for
 ```git push origin master``` - don't forget to push "the branch that you merged into" to the remote too!  
 ```gitk --all``` - [visualize commit tree](https://lostechies.com/joshuaflanagan/2010/09/03/use-gitk-to-understand-git/)
 
-![gitk](img/gitk.png)
+![gitk](img/gitk-example.png)
 
 
-## [Undoing](https://github.com/blog/2019-how-to-undo-almost-anything-with-git) [commits](https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting)
+## [Undoing](https://github.com/blog/2019-how-to-undo-almost-anything-with-git) [commits](https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting) (Only use locally)
 
 * Restoring single file locally
-```HEAD``` - most recent commit, ```HEAD~1``` = one commit before ```HEAD```  
+```HEAD``` - most recent commit, ```HEAD~1``` = one commit before ```HEAD```  (read the docs on how HEAD pointers work)
 ```git log --oneline -5``` - see unique identifiers for last 5 commits  
-```git log --patch src/helloworld.py``` - narrow down which commit you want to restore  
-```git checkout c6fab02 src/helloworld.py```  
-```git commit –a –m “restore helloworld.py from commit c6fab02”```  
+```git log --patch src/helloworld.py``` - narrow down which commit you want to restore (gives list of SHAs - Secure Hash Algorithm values uniquely identifying the commit)  
+```git checkout c6fab02 src/helloworld.py``` - checkout a file from the commit whose SHA started with ```c6fab02```  
+```git commit –a –m “restore helloworld.py from commit c6fab02”```  - commit the file you checked out, which was from an earlier commit
 * Restore everything locally to where it was after a prior commit (*use with caution*)
 ```git reset --hard c6fab02```  
+* Make a new branch starting at a previous commit  
+```git checkout c6fab02; git checkout –b mybranch```
+
 * Restore after pushing to remote repo
 ```git revert``` - but safest way is to just fix the bad code locally and push a new commit  
 
