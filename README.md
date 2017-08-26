@@ -3,6 +3,22 @@
 **I did many small commits here to learn about ```git```, so forking this repo will clutter your commit history.**  
 **I recommend you download zipfile and copy into new repo. Or use ```git clone --depth 1 https://github.com/lahoffm/github_help.git```.**
 
+## Nice tutorials & guides
+* [Pro Git ebook](https://git-scm.com/book/en/v2)
+* [Software carpentry](https://swcarpentry.github.io/git-novice/)
+* [Atlassian git tutorials](https://www.atlassian.com/git/tutorials/)
+* [Git concepts simplified](http://gitolite.com/gcs.html#(1))
+* [Github visual guide](http://marklodato.github.io/visual-git-guide/index-en.html)
+* [Gitk tutorial](https://lostechies.com/joshuaflanagan/2010/09/03/use-gitk-to-understand-git/)
+* [Aha moments when learning git](https://betterexplained.com/articles/aha-moments-when-learning-git/)
+* [A successful git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
+* [Git best practices](https://gist.github.com/pandeiro/1552496)
+
+## Nice cheatsheets
+* [PDF from rogerdudler.github.io/git-guide](git_cheat_sheet.pdf)
+* [PDF from education.github.com](git-cheat-sheet-education.pdf)
+
+
 ## Simple pipeline (*best practice: don't commit to master, commit to branches then merge into master*)
 ```git status```  
 ```git add -A``` - track files in staging area for commits  
@@ -55,21 +71,6 @@
 ```git remote -v``` - remote URLs (such as origin)  
 ```git ls-remote``` - references in remote repo  
 ```git ls-tree -r master``` - list all files in branch named "master"  
-
-## Nice tutorials & guides
-* [Pro Git ebook](https://git-scm.com/book/en/v2)
-* [Software carpentry](https://swcarpentry.github.io/git-novice/)
-* [Atlassian git tutorials](https://www.atlassian.com/git/tutorials/)
-* [Git concepts simplified](http://gitolite.com/gcs.html#(1))
-* [Github visual guide](http://marklodato.github.io/visual-git-guide/index-en.html)
-* [Gitk tutorial](https://lostechies.com/joshuaflanagan/2010/09/03/use-gitk-to-understand-git/)
-* [Aha moments when learning git](https://betterexplained.com/articles/aha-moments-when-learning-git/)
-* [A successful git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
-* [Git best practices](https://gist.github.com/pandeiro/1552496)
-
-## Nice cheatsheets
-* [PDF from rogerdudler.github.io/git-guide](git_cheat_sheet.pdf)
-* [PDF from education.github.com](git-cheat-sheet-education.pdf)
 
 ## Instructions to contribute to group project repos - still in draft form
 * ```git pull origin master``` - clone current copy of origin to local master branch  
