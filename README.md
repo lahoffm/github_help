@@ -5,9 +5,6 @@
 
 ## Nice tutorials & guides
 * [Pro Git ebook](https://git-scm.com/book/en/v2)
-* [Github for beginners](https://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1/)
-* [An intro to Git and Github for beginners](http://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
-* [Git - the simple guide](http://rogerdudler.github.io/git-guide/)
 * [Software carpentry](https://swcarpentry.github.io/git-novice/)
 * [Atlassian git tutorials](https://www.atlassian.com/git/tutorials/)
 * [Git concepts simplified](http://gitolite.com/gcs.html#(1))
@@ -20,7 +17,7 @@
 ## Nice cheatsheets
 * [PDF from rogerdudler.github.io/git-guide](git_cheat_sheet.pdf)
 * [PDF from education.github.com](git-cheat-sheet-education.pdf)
-* [PDF, Markdown cheatsheet from Github Guides](markdown-cheatsheet-online.pdf)
+
 
 ## Simple pipeline (*best practice: don't commit to master, commit to branches then merge into master*)
 ```git status```  
