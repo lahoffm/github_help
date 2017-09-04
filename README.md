@@ -2,7 +2,7 @@
 
 **I did many small commits here to learn about ```git```, so forking this repo will clutter your commit history.**  
 **I recommend you download zipfile and copy into new repo. Or use ```git clone --depth 1 https://github.com/lahoffm/github_help.git```.**
-
+ 
 ## Nice tutorials & guides
 * [Pro Git ebook](https://git-scm.com/book/en/v2)
 * [Github for beginners](https://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1/)
