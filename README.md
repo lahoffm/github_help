@@ -73,7 +73,7 @@
 ## Other useful commands 
 ```git remote -v``` - remote URLs (such as origin)  
 ```git ls-remote``` - references in remote repo  
-```git ls-tree -r master``` - list all files in branch named "master"  
+```git ls-tree -r master``` - list all tracked files in branch named "master"  
 
 ## Instructions to contribute to group project repos - still in draft form
 * ```git pull origin master``` - clone current copy of origin to local master branch  
