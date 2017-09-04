@@ -5,6 +5,9 @@
 
 ## Nice tutorials & guides
 * [Pro Git ebook](https://git-scm.com/book/en/v2)
+* [Github for beginners](https://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1/)
+* [An intro to Git and Github for beginners](http://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
+* [Git - the simple guide](http://rogerdudler.github.io/git-guide/)
 * [Software carpentry](https://swcarpentry.github.io/git-novice/)
 * [Atlassian git tutorials](https://www.atlassian.com/git/tutorials/)
 * [Git concepts simplified](http://gitolite.com/gcs.html#(1))
@@ -17,13 +20,13 @@
 ## Nice cheatsheets
 * [PDF from rogerdudler.github.io/git-guide](git_cheat_sheet.pdf)
 * [PDF from education.github.com](git-cheat-sheet-education.pdf)
-
+* [PDF, Markdown cheatsheet from Github Guides](markdown-cheatsheet-online.pdf)
 
 ## Simple pipeline (*best practice: don't commit to master, commit to branches then merge into master*)
 ```git status```  
 ```git add -A``` - track files in staging area for commits  
 ```git diff``` - [see changes](https://stackoverflow.com/questions/2529441/how-to-read-the-output-from-git-diff)  
-```git commit -am "message"``` - lock tracked files to local computer  
+```git commit -am "message"``` - commit tracked files to local computer  
 ```git push origin master``` - sync local master branch to online repo  
 
 ## Working with branches
@@ -57,9 +60,11 @@
 ```git log --oneline -5``` - see unique identifiers for last 5 commits  
 ```git log --patch src/helloworld.py``` - narrow down which commit you want to restore (gives list of SHAs - Secure Hash Algorithm values uniquely identifying the commit)  
 ```git checkout c6fab02 src/helloworld.py``` - checkout a file from the commit whose SHA started with ```c6fab02```  
-```git commit –a –m “restore helloworld.py from commit c6fab02”```  - commit the file you checked out, which was from an earlier commit
+```git commit –am “restore helloworld.py from commit c6fab02”```  - commit the file you checked out, which was from an earlier commit
 * Restore everything locally to where it was after a prior commit (*use with caution*)
 ```git reset --hard c6fab02```  
+* Undo the most recent commit  (```--hard``` removes changes to files, but ```--soft``` keeps changes)  
+```git reset --hard HEAD~1```  
 * Make a new branch starting at a previous commit  
 ```git checkout c6fab02; git checkout –b mybranch```
 * Undoing a merge
@@ -70,7 +75,10 @@
 ## Other useful commands 
 ```git remote -v``` - remote URLs (such as origin)  
 ```git ls-remote``` - references in remote repo  
-```git ls-tree -r master``` - list all files in branch named "master"  
+```git ls-tree -r master``` - list all committed files in branch named "master"  
+```git commit -m "message" path/to/my/file.ext``` - commit a single file (```./file.ext``` commits to file in root folder)  
+```git add newdir/; git commit -m "message"``` - commit a single folder and recursively commit all of its subfolders too  
+```git reset HEAD``` - clear the staging area  
 
 ## Instructions to contribute to group project repos - still in draft form
 * ```git pull origin master``` - clone current copy of origin to local master branch  
