@@ -75,26 +75,28 @@
 ```git ls-remote``` - references in remote repo  
 ```git ls-tree -r master``` - list all tracked files in branch named "master"  
 
-## Instructions to contribute to group project repos - still in draft form
-* ```git pull origin master``` - clone current copy of origin to local master branch  
+## How to contribute to group project repos - a pipeline
+* Fork the group project repo (in browser)
+* ```cd``` to a folder in command line
+* ```git clone https://github.com/your-username/your-reponame.git``` - copy forked repo to your computer
+* ```cd reponame``` - do all subsequent git commands from the repo's local folder
+* ```git remote -v``` - shows ```origin``` is the repo that you forked, the URL should have **your** username. Everything you push to ```origin``` will go to a repo under **your** username.
+* ```git remote add upstream https://github.com/group-username/group-reponame.git``` - add a remote repo called ```upstream```. This should be the group project repository that you just forked.
+* You want your local ```master``` to always be up-to-date with the ```upstream``` repo and then you work on your local branch (which you push to your own ```origin```).
+* ```git checkout -b mybranch``` - make a new branch.
+* Start working on the code, make some commits, push your branch to ```origin``` as described elsewhere in this README.
+* How to merge changes from upstream repo to your branch
+	* ```git fetch upstream master``` - fetch ```master``` branch of ```upstream``` repo
+	* **Command to show differences between upstream & local master?**
+	* ```git checkout master; git merge upstream/master``` - merge upstream repo into local master branch. Now, master branch is up-to-date with the group project's master branch.
+	* ```git checkout mybranch; git merge master``` - merge the latest upstream changes into mybranch (since the local master branch is now an up-to-date copy of upstream master branch)
+
+
+XXXXXXXXXXXXXXXXX  
 * [Git Pro Section 6.2 - Contributing to a Project](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project)
-* Use git fetch/merge instead of just git pull?
 * git tag?
 
+git checkout master - go back to master
 
-* git clone the repo into own computer, then fork the repo (in browser)
-* cd to the folder ht-archive
-* git branch, should say master
-* git remote rename origin upstream 
-* git remote add origin <your_url> such as https://github.com/lahoffm/ht-archive.git (the URL you see in browser when you click on the “Clone or Download”)
-* git branch my_branch_name [no spaces] - whenever you start working on something
-* git checkout my_branch_name
-* git status - should say you are on branch my_branch_name instead of master
-* Now start working on the code
-* git commit
-* git push origin my_branch_name - pushes the branch to your fork of ht-archive online
-* git checkout master - go back to master
-* git pull -r upstream master - pull from the upstream code (anidata/ht-archive) into master
-* Now if you do git checkout my_branch_name, then git pull -r upstream master then the branch will be updated into the latest version of the upstream repo (anidata/ht-archive)?? Not sure if this is how it works.
-* Philosophy: you want your local “master” to always be up-to-date with the upstream repo (i.e. anidata/ht-archive) and then you work on your local branch (which you push to your fork online)
+git pull -r upstream master - pull from the upstream code (anidata/ht-archive) into master
 
