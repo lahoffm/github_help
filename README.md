@@ -5,6 +5,7 @@
 
 ## Nice tutorials & guides
 * [Pro Git ebook](https://git-scm.com/book/en/v2)
+* [Git tutorial - Try Git](https://try.github.io/levels/1/challenges/1)
 * [Github for beginners](https://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1/)
 * [An intro to Git and Github for beginners](http://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
 * [Git - the simple guide](http://rogerdudler.github.io/git-guide/)
@@ -20,21 +21,22 @@
 ## Nice cheatsheets
 * [PDF from rogerdudler.github.io/git-guide](git_cheat_sheet.pdf)
 * [PDF from education.github.com](git-cheat-sheet-education.pdf)
-* [PDF, Markdown cheatsheet from Github Guides](markdown-cheatsheet-online.pdf)
+* [PDF Markdown cheatsheet from Github Guides](markdown-cheatsheet.pdf)
+* [Basic Git commands](https://confluence.atlassian.com/bitbucketserver0414/basic-git-commands-895367449.html)
 
 ## Simple pipeline (*best practice: don't commit to master, commit to branches then merge into master*)
 ```git status```  
 ```git add -A``` - track files in staging area for commits  
 ```git diff``` - [see changes](https://stackoverflow.com/questions/2529441/how-to-read-the-output-from-git-diff)  
 ```git commit -am "message"``` - lock tracked files to local computer  
-```git push origin master``` - sync local master branch to online repo  
+```git push origin master``` - sync local ```master``` branch to online repo's ```master``` branch [Explanation](https://git-scm.com/docs/git-push#git-push-codegitpushoriginmastercode) 
 
 ## Working with branches
 ```git checkout -b mybranch``` - switch to branch (```-b``` is to create & checkout in 1 step)  
-```git branch``` - list branches in repo and current branch  
+```git branch``` - list branches in repo and current branch (```-a``` option will also show [remote-tracking branches](https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches))  
 ```git add -A``` - if files were staged in master they are also staged in branch but good to do in case new files are made  
 ```git commit``` as usual within the branch  
-```git push origin mybranch``` - sync local mybranch branch to online repo  
+```git push origin mybranch``` - sync local branch ```mybranch``` to online repo's branch ```mybranch```  
 ```git merge mybranch --no-ff --m "merging mybranch into current branch"``` - mybranch = name of branch you want to merge with current branch (such as master).
 **Make sure you're in the branch you want to merge to!** ```--no-ff``` - no fast-forward (can add or reduce confusion on case-by-case basis)  
 * Solve merge conflict
@@ -74,30 +76,51 @@
 ```git remote -v``` - remote URLs (such as origin)  
 ```git ls-remote``` - references in remote repo  
 ```git ls-tree -r master``` - list all tracked files in branch named "master"  
+```git tag```, ```git push origin --tags```, etc. - [tag stable versions of your code](https://git-scm.com/book/en/v2/Git-Basics-Tagging) and push them online so people can download ["Release v1.5"](https://help.github.com/articles/working-with-tags/) for example  
 
-## How to contribute to group project repos - a pipeline
+## How to contribute to group project repos
+### Explanations
+* [Pro Git Ebook Section 6.2: Github - Contributing to a Project](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project)
+* [scikit-learn-sprint-instructions (PDF)](https://github.com/amueller/talks_odt/raw/master/2017/scikit-learn-sprint-instructions.pdf)
+* [Contributing - scikit-learn](http://scikit-learn.org/stable/developers/contributing.html)
+* [Contributing to Numpy](https://docs.scipy.org/doc/numpy/dev/)
+* [Git fetch and merge](https://longair.net/blog/2009/04/16/git-fetch-and-merge/)
+* [Difference between git pull and git fetch](https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch)
+
+### General fork-merge workflow ([Source](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project))
+1. Fork the project.  
+2. Create a topic branch from master.  
+3. Make some commits to improve the project.  
+4. Push this branch to your GitHub project.  
+5. Open a Pull Request on GitHub.  
+6. Discuss, and optionally continue committing.  
+7. The project owner merges or closes the Pull Request.  
+
+### Example fork-merge pipeline
 * Fork the group project repo (in browser)
 * ```cd``` to a folder in command line
-* ```git clone https://github.com/your-username/your-reponame.git``` - copy forked repo to your computer
-* ```cd reponame``` - do all subsequent git commands from the repo's local folder
-* ```git remote -v``` - shows ```origin``` is the repo that you forked, the URL should have **your** username. Everything you push to ```origin``` will go to a repo under **your** username.
-* ```git remote add upstream https://github.com/group-username/group-reponame.git``` - add a remote repo called ```upstream```. This should be the group project repository that you just forked.
-* You want your local ```master``` to always be up-to-date with the ```upstream``` repo and then you work on your local branch (which you push to your own ```origin```).
-* ```git checkout -b mybranch``` - make a new branch.
-* Start working on the code, make some commits, push your branch to ```origin``` as described elsewhere in this README.
-* How to merge changes from upstream repo to your branch
-	* ```git fetch upstream master``` - fetch ```master``` branch of ```upstream``` repo
-	* **Command to show differences between upstream & local master?**
-	* ```git checkout master; git merge upstream/master``` - merge upstream repo into local master branch. Now, master branch is up-to-date with the group project's master branch.
-	* ```git checkout mybranch; git merge master``` - merge the latest upstream changes into mybranch (since the local master branch is now an up-to-date copy of upstream master branch)
-
-
-XXXXXXXXXXXXXXXXX  
-* [Git Pro Section 6.2 - Contributing to a Project](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project)
-* [Git Pro Section 5.2 - Contributing to a Project]https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project
-* git tag?
-
-git checkout master - go back to master
-
-git pull -r upstream master - pull from the upstream code (anidata/ht-archive) into master
-
+* ```git clone https://github.com/my-username/my-reponame.git``` - copy forked repo to your computer
+* ```cd my-reponame``` - do all subsequent git commands from the repo's local folder
+* ```git remote add upstream https://github.com/group-username/group-reponame.git``` - track a remote repo called ```upstream```. This should be the group project repository that you just forked.
+* ```git remote -v``` - shows ```origin``` is the repo that you forked, the URL should have **your** username. Everything you push to ```origin``` will go to a repo under **your** username. There should also be a remote called ```upstream```.
+* ```git checkout -b mybranch``` - make a new branch
+* Write code, make some commits to ```mybranch```.
+* Make sure your local ```master``` and ```mybranch``` are always up-to-date with the ```upstream/master``` branch!
+	* Get changes from ```upstream/master``` branch into local ```master``` branch
+		* ```git checkout master``` - *subsequent bullets assume you're in ```master``` branch.*
+		* **Method 1:** ```git pull -r upstream master``` - Pull upstream ```master``` branch into **currently checked out** local branch *(should be ```master``` branch)*. ```-r``` option is to [rebase](https://www.atlassian.com/git/tutorials/merging-vs-rebasing) (otherwise it would do a merge).
+		* **Method 2:** *safer than Method 1 because you can examine changes before merging*
+			* ```git fetch upstream master``` - fetch ```master``` branch of ```upstream``` repo but don't merge or rebase yet, in other words "update my local copy of ```upstream/master``` branch"
+			* ```gitk --all```, ```git diff master..upstream/master```, ```git log --oneline master..upstream/master``` - See differences between local ```master``` and fetched ```upstream/master```
+			* ```git merge upstream/master``` - merge fetched ```upstream/master``` branch into **currently checked out** local branch (*should be ```master``` branch)*.
+		* Now, local ```master``` branch is up-to-date with upstream repo's ```master``` branch.
+	* Merge those changes to ```mybranch```, so it stays up-to-date with ```upstream/master``` branch.
+		* ```git checkout mybranch``` - *subsequent bullets assume you're in ```mybranch```*
+		* ```git diff master..mybranch``` - difference from ```master``` to ```mybranch```. For example, if a commit on mybranch added "123", it shows up as +123, meaning "123 added, relative to master".
+		* ```git merge master``` - merge ```master``` into ```mybranch```.
+		* Resolve any merge conflicts. *Try to avoid edits conflicting with new features in ```upstream/master``` so your feature can be pulled seamlessly into main codebase later.*
+	* Now, your local ```master``` and the group project repo's ```master``` (```upstream/master```) are identical, and ```mybranch``` has successfully incorporated the latest state of the codebase, plus your new feature.
+* ```git push origin master; git push origin mybranch``` - push ```master``` and ```mybranch``` to **your own repo**.
+* In browser, initiate [pull request](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) from ```mybranch``` when it's ready to be merged into the group project's master branch (```upstream/master```).
+* Monitor comments in pull request, make more commits/comments as needed until they merge and close pull request.
+* Pull the updated ```upstream/master``` back into your local ```master``` branch and delete ```mybranch```, since your work is now merged to the main codebase.
