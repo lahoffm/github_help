@@ -94,6 +94,7 @@
 
 XXXXXXXXXXXXXXXXX  
 * [Git Pro Section 6.2 - Contributing to a Project](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project)
+* [Git Pro Section 5.2 - Contributing to a Project]https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project
 * git tag?
 
 git checkout master - go back to master
