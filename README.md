@@ -3,6 +3,15 @@
 **I did many small commits here to learn about ```git```, so forking this repo will clutter your commit history.**  
 **I recommend you download zipfile and copy into new repo. Or use ```git clone --depth 1 https://github.com/lahoffm/github_help.git```.**
 
+## Installing git
+1. Get a [Github](https://git-scm.com/download/) account
+2. Download latest version of Git
+	* For Windows, I like using **git bash**. Download it [here](https://git-for-windows.github.io/).
+	* For Mac, download git [here](https://git-scm.com/download/) and you can run it from the Terminal.
+3. Do the setup steps described [here](https://swcarpentry.github.io/git-novice/02-setup/)
+4. Set up credentials, to avoid [annoyance of entering password](https://help.github.com/articles/why-is-git-always-asking-for-my-password/) each time you connect to Github
+	* *Not sure how to do this step-by-step on Windows and Mac*.
+
 ## Nice tutorials & guides
 * [Pro Git ebook](https://git-scm.com/book/en/v2)
 * [Git tutorial - Try Git](https://try.github.io/levels/1/challenges/1)
