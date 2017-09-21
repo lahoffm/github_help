@@ -8,6 +8,7 @@
 2. Download latest version of Git
 	* For Windows, I like using **git bash**. Download it [here](https://git-for-windows.github.io/).
 	* For Mac, download git [here](https://git-scm.com/download/) and you can run it from the Terminal.
+	* For Linux, install git [here](https://git-scm.com/download/linux).
 3. Do the setup steps described [here](https://swcarpentry.github.io/git-novice/02-setup/)
 4. Set up credentials, to avoid [annoyance of entering password](https://help.github.com/articles/why-is-git-always-asking-for-my-password/) each time you connect to Github
 	* *Not sure how to do this step-by-step on Windows and Mac*.
