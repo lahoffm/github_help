@@ -46,13 +46,17 @@
 ```git push origin mybranch``` - sync local branch ```mybranch``` to online repo's branch ```mybranch```  
 ```git merge mybranch --no-ff --m "merging mybranch into current branch"``` - mybranch = name of branch you want to merge with current branch (such as master).
 **Make sure you're in the branch you want to merge to!** ```--no-ff``` - no fast-forward (can add or reduce confusion on case-by-case basis)  
-* Solve merge conflict (haven't tried this but here's how to [solve a merge conflict during a pull request](https://help.github.com/articles/resolving-a-merge-conflict-on-github/))
+* Solve merge conflict 
 	* Open file with conflict
 	* Delete conflict marker lines containing ```<<<<<<<```, ```=======```, ```>>>>>>>```
 	* Make the changes you want to see in the final merge
 	* Save file
 	* ```git add .```
-	* ```git commit -m "resolved merge conflict"```  
+	* ```git commit -m "resolved merge conflict"``` 
+* Solve merge conflict during pull requests
+	* [Solve from local repository](https://github.com/AgileVentures/MetPlus_PETS/wiki/Resolving-Pull-Request-merge-conflicts).
+	* [Solve from Github](https://help.github.com/articles/resolving-a-merge-conflict-on-github/).
+
 
 ```git branch -d mybranch``` - delete local branch  
 ```git push origin --delete mybranch``` - delete remote branch  
