@@ -1,7 +1,4 @@
-# Lukas's scratchpad of Github tips
-
-**I did many small commits here to learn about ```git```, so forking this repo will clutter your commit history.**  
-**I recommend you download zipfile and copy into new repo. Or use ```git clone --depth 1 https://github.com/lahoffm/github_help.git```.**
+# Atlanta BEST scratchpad of Github tips
 
 ## Installing git
 1. Get a [Github](https://git-scm.com/download/) account
