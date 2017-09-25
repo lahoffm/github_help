@@ -109,7 +109,7 @@
 ### Example fork-merge pipeline
 * Fork the group project repo (in browser)
 * ```cd``` to a folder in command line
-* ```git clone https://github.com/my-username/my-reponame.git``` - copy forked repo to your computer
+* ```git clone "https://github.com/my-username/my-reponame.git"``` - copy forked repo to your computer
 * ```cd my-reponame``` - do all subsequent git commands from the repo's local folder
 * ```git remote add upstream https://github.com/group-username/group-reponame.git``` - track a remote repo called ```upstream```. This should be the group project repository that you just forked.
 * ```git remote -v``` - shows ```origin``` is the repo that you forked, the URL should have **your** username. Everything you push to ```origin``` will go to a repo under **your** username. There should also be a remote called ```upstream```.
