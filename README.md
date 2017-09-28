@@ -58,6 +58,7 @@
 	* [Solve from Github](https://help.github.com/articles/resolving-a-merge-conflict-on-github/).
 
 ```git branch -d mybranch``` - delete local branch  
+```git branch -rd upstream/master``` - delete remote-tracking branch locally. Doesn't delete the remote branch on Github.  
 ```git push origin --delete mybranch``` - delete remote branch  
 ```git push origin master``` - don't forget to push "the branch that you merged into" to the remote too!  
 ```gitk --all``` - [visualize commit tree](https://lostechies.com/joshuaflanagan/2010/09/03/use-gitk-to-understand-git/)  
@@ -133,4 +134,5 @@
 * ```git push origin master; git push origin mybranch``` - push ```master``` and ```mybranch``` to **your own repo**.
 * In browser, initiate [pull request](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) from ```mybranch``` when it's ready to be merged into the group project's master branch (```upstream/master```).
 * Monitor comments in pull request, make more commits/comments as needed until they merge and close pull request.
+	* If someone submitted a pull request to your repo, [checkout the pull request](https://help.github.com/articles/checking-out-pull-requests-locally/) and test locally before merging it on Github.
 * Pull the updated ```upstream/master``` back into your local ```master``` branch and delete ```mybranch```, since your work is now merged to the main codebase.
