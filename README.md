@@ -35,8 +35,9 @@
 ```git status```  
 ```git add -A``` - track files in staging area for commits  
 ```git diff``` - [see changes](https://stackoverflow.com/questions/2529441/how-to-read-the-output-from-git-diff)  
-```git commit -am "message"``` - lock tracked files to local computer  
-```git push origin master``` - sync local ```master``` branch to online repo's ```master``` branch [Explanation](https://git-scm.com/docs/git-push#git-push-codegitpushoriginmastercode) 
+```git commit -am "message"``` - commit tracked files to local computer.  
+```git commit -a -m "Main commit message" -m "Second paragraph with more details"``` - commit multiple paragraphs.  
+```git push origin master``` - sync local ```master``` branch to online repo's ```master``` branch [Explanation](https://git-scm.com/docs/git-push#git-push-codegitpushoriginmastercode)  
 
 ## Working with branches
 ```git checkout -b mybranch``` - switch to branch (```-b``` is to create & checkout in 1 step)  
